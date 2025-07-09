@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patricia Teixeira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+
+        var currentIndex = 0;
+
+        function chama_movimentacao_slide(movimento) {
+            const track = document.getElementById('track');
+            const slides = document.querySelectorAll('.slide');
+            moveSlide(movimento, slides)
+
+        }
+
+
+
+        function moveSlide(direction, slides) {
+
+            currentIndex = (currentIndex + direction + slides.length) % slides.length;
+
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <!-- CABECALHO -->
+            <div class="div_cabecalho">
+                <div class="tiulo_subtitulo">
+
+                    <h1>Patricia Teixeira</h1>
+                    <p class="paragrafo_cabecalho">* MAQUIAGEM * SOMBRACELHAS * PENTEADOS *</p>
+
+                </div>
+
+            </div>
+
+        </header>
+        <!-- CORPO DA PAGINA -->
+        <div class="div_informacoes">
+
+            <img src="assets/gata-blazer.jpg" class="profile-picture" alt="">
+
+            <div class="sobre_mim">
+                <p class="paragrafo_sobre_mim">
+                    Olá, meu nome é Patricia Teixeira, sou maquiadora, penteadista ,desinger de sombrancelhas e micropigmentadora. Estou aqui para
+                    realçar a sua beleza e proporcionar uma experiência única de transformação. Com anos de
+                    experiência e paixão pela arte da maquiagem, estou pronta para atender às suas necessidades e
+                    desejos. Vamos juntos criar looks incríveis que vão destacar o melhor de você!
+                </p>
+
+            </div>
+            
+        </div>
+
+        <!-- TRABALHOS -->
+        <div class="secoes_trabalhos">
+
+            <!-- MAQUIAGEM -->
+            <div class="secao_trabalho">
+                <div class="carousel">
+                    <div class="carousel-track" id="track">
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 1.jpeg" alt="Slide 1"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 2.jpeg" alt="Slide 2"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 3.jpeg" alt="Slide 3"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 4.jpeg" alt="Slide 4"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 5.jpeg" alt="Slide 5"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 6.jpeg" alt="Slide 6"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 7.jpeg" alt="Slide 7"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 8.jpeg" alt="Slide 8"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 9.jpeg" alt="Slide 9"></div>
+                        <div class="slide"><img src="assets/Carrosel_maquiagem/modelo 10.jpeg" alt="Slide 10"></div>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="chama_movimentacao_slide(-1)">❮</button>
+                        <button onclick="chama_movimentacao_slide(1)">❯</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="div_informacoes_2">
+                <p class="paragrafo_sobre_mim">
+                    Gostou do que viu ?
+                    Se você quer saber mais, é só me chamar!
+                   
+                   
+                    Me encontre nas redes e fale comigo agora:
+                        <br>Instagram
+                        <br>WhatsApp  
+                        <br>Facebook
+                        <br>
+                    
+                    Escolha o canal que preferir — tô por aqui esperando sua mensagem! 
+                </p>
+             
+                <img src="assets/gata-telefone.jpg" class="profile-picture" alt="">
+    
+            </div>
+            <div class="rodape">
+
+
+                <div class="conteudo_rodape">
+                    
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/patriciaa_teixeirinha"
+                            class="icone" target="_blank" aria-label="Instagram">
+                            <img src="assets/icones-redes-sociais/icons8-instagram.png" alt="Instagram" width="30"
+                                height="30">
+                        </a>
+                        <a href="https://www.facebook.com/share/1AeLHfhfx8/?mibextid=wwXIfr" class="icone" target="_blank" aria-label="Facebook">
+                            <img src="assets/icones-redes-sociais/icons8-facebook.png" alt="Facebook" width="30"
+                                height="30">
+                        </a>
+                        <a href="https://wa.me/5519996005321?text=Oi gostaria de saber mais sobre os serviços, vim pela landing page"
+                            class="icone" target="_blank" aria-label="WhatsApp">
+                            <img src="assets/icones-redes-sociais/icons8-whatsapp.png" alt="WhatsApp" width="30"
+                                height="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
